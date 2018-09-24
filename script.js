@@ -9,7 +9,7 @@ const npmPackage = Vue.component('npm-package', {
   mounted: async function() {
     try {
       let res = await fetch(
-        `http://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${
+        `http://alexcambose.com:8080/https://registry.npmjs.org/${
           this.word
         }
     `,
@@ -96,7 +96,7 @@ const app = new Vue({
       }
       this.fetchingWords = true;
       fetch(
-        `http://cors-anywhere.herokuapp.com/http://relatedwords.org/api/related?term=${word}`,
+        `http://alexcambose.com:8080/http://relatedwords.org/api/related?term=${word}`,
         { origin: null }
       )
         .then(e => e.json())
