@@ -111,7 +111,6 @@ input:focus {
   padding: 14px;
   background-color: rgba(255, 255, 255, 0.1);
   user-select: none;
-  color: #fff;
   font-weight: bold;
   border: 1px solid rgba(255, 255, 255, 0.1);
   grid-column: span 2;
@@ -119,6 +118,7 @@ input:focus {
 }
 
 .name-card.available {
+  cursor: pointer;
   grid-column: span 1;
   grid-row: span 1;
   background-color: rgba(255, 255, 255, 0.5);
@@ -127,6 +127,7 @@ input:focus {
 .name-card.description {
   font-weight: 200;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .name-card div {
@@ -208,5 +209,9 @@ a:hover {
 }
 
 small {
-  font-size: 70%;
+  font-size: 70% !important;
+}
+
+.thin {
+  font-weight: 200;
 }

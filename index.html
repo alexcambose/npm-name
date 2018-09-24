@@ -44,7 +44,7 @@
         </div>
     </div>
     <script type="text/x-template" id="npm-package">
-        <div :class="{'name-card': true, available: avalability, hidden: onlyAvailable && !avalability}">
+        <div :style="{ borderColor: `rgba(255,255,255, ${borderOpacity})`, borderWidth: borderWidth + 'px' }" :class="{'name-card': true, available: avalability, hidden: onlyAvailable && !avalability}" @click="clickAvailble">
             <div v-if="loading"><i class="fas fa-circle-notch fa-spin"></i></div>
             <div v-else-if="!avalability">
                 <span class="title">{{info.name}}</span>
@@ -54,6 +54,7 @@
                     <a :href="`https://npmjs.com/${info._id}`" target="_blank"><i class="fab fa-npm"></i></a>
                 </div>
             </div>
+            <div v-else-if="clicked"><small class="title thin">Copied to clipboard!</small></div>
             <div v-else><span class="title">{{word}}</span></div>
         </div>
     </script>
@@ -64,8 +65,9 @@
             <div>Made by <a href="https://alexcambose.ro">Alexandru Cambose</a>. See <a href="">repository</a>.</div>
             <div>
                 <br>
-               <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/alexcambose/npm-name" data-size="large" data-show-count="true" aria-label="Star alexcambose/npm-name on GitHub">Star</a> <br><br>
+                <!-- Place this tag where you want the button to render. -->
+                <a class="github-button" href="https://github.com/alexcambose/npm-name" data-size="large"
+                    data-show-count="true" aria-label="Star alexcambose/npm-name on GitHub">Star</a> <br><br>
                 <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Find names for your future npm modules!"
                     data-size="large">
                     Tweet</a>
