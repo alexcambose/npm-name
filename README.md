@@ -2,6 +2,6 @@
 
 Find names for your future npm modules!
 
-![Screenshot](screenshot.png)
+[Visit website](http://alexcambose.github.io/npm-name)
 
-[Visit website](https://alexcambose.github.io/npm-name)
+![Screenshot](screenshot.png)
